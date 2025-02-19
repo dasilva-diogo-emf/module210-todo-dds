@@ -58,14 +58,14 @@ jobs:
           id: lighthouse
           uses: treosh/lighthouse-ci-action@v11
           with:
-          urls: "https://todoapp.diogodasilva01.emf-informatique.ch/"
-          uploadArtifacts: true
-          temporaryPublicStorage: true
-          assertions: >
-            {
-              "performance": ["error", {"minScore": 0.80}],
-              "accessibility": ["error", {"minScore": 0.85}]
-            }
+            urls: "https://todoapp.diogodasilva01.emf-informatique.ch/"
+            uploadArtifacts: true
+            temporaryPublicStorage: true
+            assertions: >
+              {
+                "performance": ["error", {"minScore": 0.80}],
+                "accessibility": ["error", {"minScore": 0.85}]
+              }
 
  
   close_pull_request_job:
