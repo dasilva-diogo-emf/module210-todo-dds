@@ -61,7 +61,7 @@ jobs:
       - name: Audit with Lighthouse CI
         uses: treosh/lighthouse-ci-action@v12
         with:
-          urls: "https://your-deployed-app-url"  # Remplace par l'URL de ton app déployée
+          urls: "https://todoapp.diogodasilva01.emf-informatique.ch"  # Remplace par l'URL de ton app déployée
           uploadArtifacts: true
           temporaryPublicStorage: true
 
