@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t todo-app:dd -f /src/backend/
+          docker build -t todo-app:dd -f /src/backend/Dockerfile /src/backend/
         
       - name: Push Docker image to registry
         run: |
