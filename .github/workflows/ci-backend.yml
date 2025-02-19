@@ -2,8 +2,8 @@ name: Build and save my Docker image to a regitry
 
 on:
   push:
-    paths:
-      - 'src/backend/**'  # Déclenchement lorsque le code est modifié 
+    #paths:
+      #- 'src/backend/**'  # Déclenchement lorsque le code est modifié   
 
 env:
   REG_NAME: "exo.container-registry.com" # Nom du registre sans "azurecr.io"
