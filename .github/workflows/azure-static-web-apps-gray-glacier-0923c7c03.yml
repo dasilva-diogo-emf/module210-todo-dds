@@ -54,17 +54,20 @@ jobs:
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
 
-  lighthouse_ci:
-    needs: build_and_deploy_job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Audit with Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v12
-        with:
-          urls: "https://todoapp.diogodasilva01.emf-informatique.ch"  # Remplace par l'URL de ton app déployée
+        - name: Exécuter Lighthouse avec assertions
+          id: lighthouse
+          uses: treosh/lighthouse-ci-action@v11
+          with:
+          urls: "https://todoapp.diogodasilva01.emf-informatique.ch/"
           uploadArtifacts: true
           temporaryPublicStorage: true
+          assertions: >
+            {
+              "performance": ["error", {"minScore": 0.80}],
+              "accessibility": ["error", {"minScore": 0.85}]
+            }
 
+ 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
