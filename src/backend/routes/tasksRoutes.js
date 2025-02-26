@@ -16,6 +16,10 @@ router.get("/", async (req, res, next) => {
         if (conn) return conn.release();
     }
 });
+// TEST 
+router.get("/test", async (req, res, next) => {
+        res.send("result");
+});
 
 // POST 
 router.post("/", async (req, res, next) => {
