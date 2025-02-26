@@ -1,4 +1,4 @@
-const apiEndpoint = "webappdasilva-aqhuehbddchufhbs.northeurope-01.azurewebsites.net/api/tasks";
+const apiEndpoint = "webappdasilva-aqhuehbddchufhbs.northeurope-01.azurewebsites.net";
 
 $(document).ready(function () {
   // Charger les tâches au démarrage
